@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游泳班報名</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🏊 游泳班報名</h1>
+    <p class="subtitle">請填寫以下資料，選擇你想參加的時段</p>
+
+    <form id="signupForm">
+      <label>姓名
+        <input type="text" id="name" required placeholder="王小明">
+      </label>
+
+      <label>電話
+        <input type="tel" id="phone" required placeholder="0912345678">
+      </label>
+
+      <label>Email
+        <input type="email" id="email" required placeholder="you@example.com">
+      </label>
+
+      <label>選擇時段</label>
+      <div id="slots" class="slots">
+        <p class="loading">載入中…</p>
+      </div>
+
+      <button type="submit" id="submitBtn">送出報名</button>
+      <p id="message" class="message"></p>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

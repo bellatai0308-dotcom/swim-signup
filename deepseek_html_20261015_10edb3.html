@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游泳班管理後台</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container { max-width: 900px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+    th, td { padding: 10px; border-bottom: 1px solid #eee; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    .toolbar { display: flex; gap: 10px; margin-bottom: 16px; }
+    .toolbar input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+    .toolbar button { width: auto; padding: 10px 20px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔒 管理後台</h1>
+
+    <div id="loginBox">
+      <label>管理密碼
+        <input type="password" id="password" placeholder="輸入密碼">
+      </label>
+      <button id="loginBtn">登入</button>
+      <p id="loginMsg" class="message"></p>
+    </div>
+
+    <div id="adminBox" class="hidden">
+      <div class="toolbar">
+        <input type="text" id="search" placeholder="搜尋姓名 / 電話 / Email…">
+        <button id="exportBtn">匯出 CSV</button>
+        <button id="refreshBtn">重新整理</button>
+      </div>
+      <div id="tableWrap"></div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
